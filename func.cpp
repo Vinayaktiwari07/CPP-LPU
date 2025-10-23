@@ -1,4 +1,5 @@
 #include<iostream>
+//THIS IS EXAMOLE OF FUNCTION
 using namespace std;
 
 int multi(int a, int b, int c){
