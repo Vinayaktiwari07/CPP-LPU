@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main() {
+    int n = 3;
+
+    int arr[n][n] = {{1,2,3},{4,0,5},{6,7,8}};
+    int vis[n][n] = {{1,2,3},{4,0,5},{6,7,8}};
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if(vis[i][j] == 0){
+                for(int k=0; k<n; k++){
+                    arr[i][k]=0;
+                }
+                for(int k=0; k<n; k++){
+                    arr[k][j]=0;
+                }
+            }
+        }
+    }
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout << arr[i][j] << " ";
+        }
+    }
+    cout << endl;
+    return 0;
+}
